@@ -63,3 +63,8 @@ Este projeto é de uso livre para fins educacionais e não possui restrições c
 ---
 
 Desenvolvido com dedicação para valorizar o artesanato local.
+
+# Team
+
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/222240928?v=4" width="115"><br><sub>Thiago Fabri</sub>](https://github.com/TllFabri) |
+| :---: |
