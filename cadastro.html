@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Produto - Mãos que Criam</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>MÃOS QUE CRIAM</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="cadastro.html">Cadastrar Produto</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="titulo-form">Cadastrar Produto</h2>
+
+    <form id="form-produto">
+      <input type="hidden" name="id" id="id">
+
+      <label>Nome:</label>
+      <input type="text" name="nome" id="nome" required><br>
+
+      <label>Preço:</label>
+      <input type="number" step="0.01" name="preco" id="preco" required><br>
+
+      <label>Descrição:</label>
+      <textarea name="descricao" id="descricao" required></textarea><br>
+
+      <label>Imagem:</label>
+      <input type="text" name="imagem" id="imagem" placeholder="ex: vaso.jpg" required><br>
+
+      <button type="submit">Salvar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mãos que Criam</p>
+  </footer>
+
+  <script src="js/util.js"></script>
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

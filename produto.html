@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhes do Produto - Mãos que Criam</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>MÃOS QUE CRIAM</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="cadastro.html">Cadastrar Produto</a>
+    </nav>
+  </header>
+
+  <main id="detalhes-produto"></main>
+
+  <footer>
+    <p>&copy; 2025 Mãos que Criam</p>
+  </footer>
+
+  <script src="js/util.js"></script>
+  <script>
+    const id = getParam('id');
+
+    fetch(`php/get_produto.php?id=${id}`)
+      .then(res => res.json())
+      .then(p => {
+        document.getElementById('detalhes-produto').innerHTML = `
+          <h2>${p.nome}</h2>
+          <img src="img/${p.imagem}" alt="${p.nome}" class="img-detalhe">
+          <p>${p.descricao}</p>
+          <p><strong>Preço:</strong> R$ ${p.preco}</p>
+          <a href="cadastro.html?id=${p.id}" class="btn">Editar</a>
+        `;
+      });
+  </script>
+</body>
+</html>
