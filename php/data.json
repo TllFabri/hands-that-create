@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "nome": "Vaso de Barro",
+        "preco": 45,
+        "descricao": "Vaso artesanal moldado \u00e0 m\u00e3o e pintado com tinta natural.",
+        "imagem": "vaso.jpg"
+    },
+    {
+        "id": 2,
+        "nome": "Cesta de Palha",
+        "preco": 30,
+        "descricao": "Cesta tran\u00e7ada com fibras naturais, ideal para decora\u00e7\u00e3o.",
+        "imagem": "cesta.jpg"
+    }
+]

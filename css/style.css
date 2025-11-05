@@ -1,0 +1,256 @@
+/*
+======================================================
+  ESTILOS GLOBAIS / BASE
+======================================================
+*/
+:root {
+  --cor-principal: #A85A32; /* Marrom Rústico */
+  --cor-secundaria: #F9EBEA; /* Bege Claro / Creme */
+  --cor-acento: #4CAF50; /* Verde para botões/links */
+  --cor-texto: #333;
+  --cor-fundo: #FFFFFF;
+  --cor-borda: #ccc;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: var(--cor-fundo);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1, h2 {
+  color: var(--cor-principal);
+  text-align: center;
+}
+
+/*
+======================================================
+  HEADER E NAVEGAÇÃO
+======================================================
+*/
+header {
+  background-color: var(--cor-principal);
+  color: var(--cor-fundo);
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  color: var(--cor-fundo);
+  font-size: 2em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  padding: 5px 15px;
+  margin: 0 5px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principal);
+}
+
+/*
+======================================================
+  RODAPÉ
+======================================================
+*/
+footer {
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: var(--cor-principal);
+  color: var(--cor-fundo);
+}
+
+/*
+======================================================
+  BOTÕES (btn)
+======================================================
+*/
+.btn {
+  display: inline-block;
+  background-color: var(--cor-acento);
+  color: var(--cor-fundo);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #388E3C; /* Um verde mais escuro no hover */
+}
+
+/*
+======================================================
+  PÁGINA HOME
+======================================================
+*/
+.home {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.home p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+/*
+======================================================
+  LISTA DE PRODUTOS (produtos.html)
+======================================================
+*/
+.lista {
+  display: grid;
+  /* Cria um grid responsivo: no mínimo 250px por coluna */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.produto-item {
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background-color: var(--cor-fundo);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.produto-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.produto-item h3 {
+  color: var(--cor-principal);
+  margin: 10px 0 5px;
+  padding: 0 10px;
+}
+
+.produto-item p {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #c0392b; /* Um vermelho para destacar o preço */
+}
+
+.produto-item .btn {
+  display: block;
+  margin: 10px auto 15px;
+  width: 80%;
+}
+
+/*
+======================================================
+  DETALHES DO PRODUTO (produto.html)
+======================================================
+*/
+#detalhes-produto {
+  text-align: center;
+}
+
+.img-detalhe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#detalhes-produto p {
+  text-align: left;
+  padding: 0 20px;
+}
+
+#detalhes-produto strong {
+  color: var(--cor-principal);
+}
+
+/*
+======================================================
+  FORMULÁRIO DE CADASTRO (cadastro.html)
+======================================================
+*/
+#form-produto {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  background-color: #fcfcfc;
+}
+
+#form-produto label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--cor-principal);
+}
+
+#form-produto input[type="text"],
+#form-produto input[type="number"],
+#form-produto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura */
+  font-size: 1em;
+}
+
+#form-produto textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#form-produto button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+/* Estilo para campos em foco */
+#form-produto input:focus,
+#form-produto textarea:focus {
+  border-color: var(--cor-acento);
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
